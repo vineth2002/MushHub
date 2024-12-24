@@ -1,6 +1,8 @@
+$primary-color: #B8A07E;
 .signup-container {
 	display: flex;
 	height: 100vh;
+	background-color: #f8f8f8;
   }
   
   .signup-form {
@@ -11,11 +13,14 @@
 	align-items: center;
 	padding: 20px;
 	background-color: #f5f5f5;
+	// background-color: white; // White card for the form
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Card shadow effect
   }
   
   .signup-form h1 {
-	font-size: 24px;
-	margin-bottom: 10px;
+	font-size: 28px;
+	color: #333;
+	margin-bottom: 15px;
   }
   
   .signup-form p {
@@ -28,6 +33,7 @@
 	max-width: 400px;
 	display: flex;
 	flex-direction: column;
+	// gap: 15px;
   }
   
   .signup-form input {
@@ -35,37 +41,70 @@
 	padding: 10px;
 	font-size: 16px;
 	border: 1px solid #ccc;
-	border-radius: 4px;
+	border-radius: 5px;
+	transition: border-color 0.3s;
+	
+	&:focus {
+		border-color: $primary-color;
+		outline: none;
+	  }
   }
+ 
   
   .signup-form button {
 	padding: 10px;
-	font-size: 16px;
+	font-size: 18px;
+	font-weight: bold;
 	border: none;
-	border-radius: 4px;
-	background-color: #4caf50;
+	border-radius: 5px;
+	background-color: $primary-color;
 	color: white;
 	cursor: pointer;
+
+	&:hover {
+		background-color: darken($primary-color, 10%);
+	  }
   }
   
-  .signup-form button:hover {
-	background-color: #45a049;
-  }
+//   .signup-form button:hover {
+// 	background-color: #45a049;
+//   }
   
   .or-separator {
-	margin: 20px 0;
 	position: relative;
 	text-align: center;
+	font-size: 14px;
+	color: #888;
+	margin: 20px 0;
   }
   
-  .or-separator::before,
-  .or-separator::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	width: 40%;
-	border-top: 1px solid #ccc;
-  }
+//   .or-separator::before,
+//   .or-separator::after {
+// 	content: '';
+// 	position: absolute;
+// 	top: 50%;
+// 	width: 40%;
+// 	border-top: 1px solid #ccc;
+
+// 	&::before,
+// 	&::after {
+// 	  content: '';
+// 	  position: absolute;
+// 	  top: 50%;
+// 	  width: 40%;
+// 	  height: 1px;
+// 	  background: #ddd;
+// 	}
+  
+// 	&::before {
+// 	  left: 0;
+// 	}
+  
+// 	&::after {
+// 	  right: 0;
+// 	}
+  
+//   }
   
   .or-separator::before {
 	left: 0;
@@ -87,12 +126,17 @@
   
   .google-btn img {
 	margin-right: 10px;
+	width: 20px;
+	height: 20px;
   }
   
   .background-image {
 	flex: 1;
-	background-image: url('path/to/background/image.jpg');
+	background-image: url('../../assets/Signup.jpg');
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   }
   

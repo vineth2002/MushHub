@@ -1,0 +1,83 @@
+$primary-color: #B8A07E;
+$secondary-color: #5bc0de;
+$background-color: #f8f8f8;
+$text-color: #333;
+$font-family:'Lato', sans-serif;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $background-color;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .auth-buttons {
+    display: flex;
+
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: $font-family;
+    }
+
+    .signup-button {
+      background-color: $primary-color;
+      color: white;
+    }
+
+    .login-button {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-left: 20px;
+      font-size: 20px;
+      margin-right: 40px;
+      
+    }
+  }
+}
